@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Parodontal Clinic – clinică stomatologică modernă în Moldova. Tratamente de parodontologie, implantologie, estetică dentară. Programați o consultație gratuită.">
+<meta name="keywords" content="clinica stomatologica, parodontologie, implant dentar, estetică dentară, Moldova, stomatolog, Chisinau">
+<title>Parodontal Clinic – Sănătate Dentară de Excelență</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a1628;
+  --navy2:#12274a;
+  --teal:#1a7a6e;
+  --teal-light:#22a99a;
+  --gold:#c9a84c;
+  --gold-light:#e8c96d;
+  --cream:#f7f4ef;
+  --cream2:#ede8df;
+  --white:#ffffff;
+  --gray:#6b7280;
+  --light:#f0ede8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s ease;background:transparent}
+nav.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);padding:14px 60px;box-shadow:0 1px 0 rgba(0,0,0,0.08)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--teal),var(--teal-light));border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:white}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);letter-spacing:0.02em;transition:color 0.3s}
+nav.scrolled .logo-text{color:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{text-decoration:none;font-size:13.5px;font-weight:400;letter-spacing:0.04em;color:rgba(255,255,255,0.85);transition:color 0.3s;text-transform:uppercase}
+nav.scrolled .nav-links a{color:var(--gray)}
+.nav-links a:hover{color:var(--gold)!important}
+.nav-cta{background:var(--gold);color:var(--navy)!important;padding:10px 22px;border-radius:4px;font-weight:500!important;letter-spacing:0.05em!important;transition:all 0.3s!important}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px)}
+
+.hero{min-height:100vh;background:linear-gradient(165deg, var(--navy) 0%, var(--navy2) 50%, #1a3a5c 100%);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;opacity:0.04}
+.hero-bg svg{width:100%;height:100%}
+.hero-line{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(180deg, rgba(26,122,110,0.15) 0%, rgba(201,168,76,0.08) 100%);clip-path:polygon(15% 0, 100% 0, 100% 100%, 0% 100%)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);padding:7px 16px;border-radius:2px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:28px}
+.hero-badge span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+h1{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--white);line-height:1.05;margin-bottom:24px;letter-spacing:-0.01em}
+h1 em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:44px;max-width:440px;font-weight:300}
+.hero-btns{display:flex;gap:16px;align-items:center}
+.btn-primary{background:var(--gold);color:var(--navy);padding:15px 32px;border:none;border-radius:4px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.05em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-transform:uppercase}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:rgba(255,255,255,0.75);padding:15px 32px;border:1px solid rgba(255,255,255,0.2);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;letter-spacing:0.05em;cursor:pointer;text-decoration:none;transition:all 0.3s;text-transform:uppercase}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.5);color:white}
+.hero-stats{display:flex;gap:40px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08)}
+.stat-item{text-align:left}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--gold-light);line-height:1}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px}
+.hero-visual{position:relative}
+.hero-card-main{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;backdrop-filter:blur(10px)}
+.hero-card-header{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.avatar{width:48px;height:48px;background:linear-gradient(135deg,var(--teal),var(--teal-light));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500}
+.doc-name{font-size:15px;font-weight:500;color:white}
+.doc-title{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
+.hero-card-rating{display:flex;gap:2px;margin-bottom:6px}
+.star{color:var(--gold);font-size:14px}
+.rating-text{font-size:13px;color:rgba(255,255,255,0.5);margin-top:2px}
+.hero-card-quote{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;font-style:italic;font-family:'Cormorant Garamond',serif;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)}
+.floating-badge{position:absolute;bottom:-16px;right:-16px;background:var(--teal);color:white;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:10px}
+.fb-icon{width:32px;height:32px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.fb-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;line-height:1}
+.fb-label{font-size:11px;opacity:0.75;margin-top:1px}
+
+section{padding:100px 60px}
+.section-header{text-align:center;max-width:600px;margin:0 auto 64px}
+.eyebrow{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:16px}
+h2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:400;line-height:1.1;color:var(--navy);margin-bottom:16px}
+h2 em{font-style:italic;color:var(--teal)}
+.section-sub{font-size:16px;color:var(--gray);line-height:1.7;font-weight:300}
+.max-w{max-width:1200px;margin:0 auto}
+
+.servicii{background:var(--cream)}
+.servicii-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--cream2)}
+.serviciu-card{background:var(--white);padding:44px 36px;transition:all 0.35s ease;cursor:pointer;position:relative;overflow:hidden}
+.serviciu-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));transform:scaleX(0);transition:transform 0.3s ease}
+.serviciu-card:hover::before{transform:scaleX(1)}
+.serviciu-card:hover{background:var(--navy);transform:translateY(-4px);box-shadow:0 20px 60px rgba(10,22,40,0.2)}
+.serviciu-card:hover .s-title,.serviciu-card:hover .s-desc{color:white}
+.serviciu-card:hover .s-num{color:rgba(255,255,255,0.1)}
+.serviciu-card:hover .s-icon-bg{background:rgba(26,122,110,0.3)}
+.s-icon-bg{width:52px;height:52px;background:rgba(26,122,110,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:background 0.3s}
+.s-icon-bg svg{width:26px;height:26px;stroke:var(--teal);stroke-width:1.5;fill:none}
+.serviciu-card:hover .s-icon-bg svg{stroke:var(--teal-light)}
+.s-num{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:rgba(10,22,40,0.06);position:absolute;top:20px;right:28px;line-height:1;transition:color 0.3s}
+.s-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--navy);margin-bottom:12px;transition:color 0.3s}
+.s-desc{font-size:14px;color:var(--gray);line-height:1.65;transition:color 0.3s;font-weight:300}
+
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img{position:relative}
+.about-img-main{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--navy) 0%,var(--teal) 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.about-img-main svg{width:60%;opacity:0.15}
+.about-accent{position:absolute;bottom:-24px;right:-24px;background:var(--gold);padding:24px 28px;border-radius:8px;text-align:center}
+.accent-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;color:var(--navy);line-height:1}
+.accent-label{font-size:12px;color:var(--navy);opacity:0.7;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+.about-content{padding:20px 0}
+.about-content h2{text-align:left}
+.about-content .section-sub{text-align:left;margin-bottom:32px}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+.check-list li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--navy);line-height:1.5}
+.check-dot{width:20px;height:20px;background:rgba(26,122,110,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.check-dot svg{width:10px;height:10px;stroke:var(--teal);stroke-width:2.5;fill:none}
+
+.echipa{background:var(--cream)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.team-card{background:var(--white);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(10,22,40,0.12)}
+.team-photo{aspect-ratio:4/5;background:linear-gradient(160deg,#1a2a45 0%,var(--teal) 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.team-photo svg{width:50%;opacity:0.12}
+.team-photo-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,40,0.7) 0%,transparent 60%)}
+.team-body{padding:24px 22px}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--navy);margin-bottom:4px}
+.team-role{font-size:12px;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:12px}
+.team-desc{font-size:13.5px;color:var(--gray);line-height:1.6;font-weight:300}
+
+.testimoniale{background:var(--navy);padding:100px 60px}
+.testimoniale h2{color:white}
+.testimoniale h2 em{color:var(--gold-light)}
+.testimoniale .eyebrow{color:var(--gold)}
+.testimoniale .section-sub{color:rgba(255,255,255,0.5)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.test-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:32px;transition:all 0.3s}
+.test-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(201,168,76,0.2)}
+.test-stars{display:flex;gap:3px;margin-bottom:18px}
+.test-stars span{color:var(--gold);font-size:14px}
+.test-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.85);line-height:1.6;font-style:italic;margin-bottom:24px}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-av{width:40px;height:40px;border-radius:50%;background:rgba(26,122,110,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--teal-light)}
+.test-name{font-size:14px;font-weight:500;color:white}
+.test-date{font-size:12px;color:rgba(255,255,255,0.35);margin-top:1px}
+
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{text-align:left}
+.contact-info .section-sub{text-align:left;margin-bottom:36px}
+.info-items{display:flex;flex-direction:column;gap:22px}
+.info-item{display:flex;align-items:flex-start;gap:16px}
+.info-icon{width:44px;height:44px;background:rgba(26,122,110,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:20px;height:20px;stroke:var(--teal);stroke-width:1.5;fill:none}
+.info-label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--teal);font-weight:500;margin-bottom:4px}
+.info-value{font-size:15px;color:var(--navy);font-weight:400}
+.contact-form{background:white;border-radius:16px;padding:40px;box-shadow:0 8px 40px rgba(10,22,40,0.08)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.form-group label{font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray);font-weight:500}
+.form-group input,.form-group select,.form-group textarea{border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);outline:none;transition:border-color 0.2s;background:white}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-submit{background:var(--navy);color:white;border:none;padding:15px 36px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.05em;cursor:pointer;width:100%;transition:all 0.3s;text-transform:uppercase}
+.form-submit:hover{background:var(--teal);transform:translateY(-1px)}
+
+footer{background:var(--navy);padding:64px 60px 32px;color:rgba(255,255,255,0.5)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-text{color:white;font-size:22px}
+.footer-tagline{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:12px;font-weight:300;max-width:260px}
+.footer-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);font-weight:500;margin-bottom:18px}
+.footer-col a{display:block;color:rgba(255,255,255,0.45);font-size:14px;text-decoration:none;margin-bottom:10px;transition:color 0.2s;font-weight:300}
+.footer-col a:hover{color:white}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:fadeUp 0.6s ease forwards}
+.hero h1{animation:fadeUp 0.6s 0.15s ease both}
+.hero-sub{animation:fadeUp 0.6s 0.25s ease both}
+.hero-btns{animation:fadeUp 0.6s 0.35s ease both}
+.hero-stats{animation:fadeUp 0.6s 0.45s ease both}
+.hero-visual{animation:fadeUp 0.8s 0.3s ease both}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  nav{padding:16px 24px}
+  nav.scrolled{padding:12px 24px}
+  .nav-links{display:none}
+  .hero-content{grid-template-columns:1fr;gap:40px;padding:80px 24px 40px}
+  h1{font-size:42px}
+  .hero-visual{display:none}
+  section{padding:64px 24px}
+  .servicii-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .test-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+    </div>
+    <span class="logo-text">Parodontal Clinic</span>
+  </a>
+  <div class="nav-links">
+    <a href="#servicii">Servicii</a>
+    <a href="#despre">Despre noi</a>
+    <a href="#echipa">Echipa</a>
+    <a href="#testimoniale">Recenzii</a>
+    <a href="#contact" class="nav-cta">Programare</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-line"></div>
+  <div class="hero-bg">
+    <svg viewBox="0 0 1400 800" fill="none"><circle cx="700" cy="400" r="350" stroke="white" stroke-width="1" stroke-dasharray="4 8"/><circle cx="700" cy="400" r="250" stroke="white" stroke-width="0.5" stroke-dasharray="2 6"/><circle cx="700" cy="400" r="150" stroke="white" stroke-width="0.5"/></svg>
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge"><span></span>Clinică Stomatologică Premium</div>
+      <h1>Zâmbetul tău este <em>arta</em> noastră</h1>
+      <p class="hero-sub">Tratamente stomatologice de înaltă performanță în inima Moldovei. De la parodontologie la implantologie — îngrijire completă pentru sănătatea dentară.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Programare Online
+        </a>
+        <a href="#servicii" class="btn-secondary">Descoperă serviciile</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Ani experiență</div></div>
+        <div class="stat-item"><div class="stat-num">4800+</div><div class="stat-label">Pacienți tratați</div></div>
+        <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Satisfacție</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-main">
+        <div class="hero-card-header">
+          <div class="avatar">Dr</div>
+          <div>
+            <div class="doc-name">Dr. Elena Popescu</div>
+            <div class="doc-title">Medic Specialist Parodontolog</div>
+          </div>
+        </div>
+        <div class="hero-card-rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="rating-text" style="color:rgba(255,255,255,0.45);font-size:12px">4.9 / 5 — 320 recenzii Google</div>
+        <div class="hero-card-quote">"Venim la Parodontal Clinic de 5 ani. Profesionalism, echipamente moderne și o echipă de medici extraordinară. Recomand cu toată inima!"</div>
+      </div>
+      <div class="floating-badge">
+        <div class="fb-icon">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="fb-num">ISO 9001</div>
+          <div class="fb-label">Certificat calitate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="servicii" id="servicii">
+  <div class="max-w">
+    <div class="section-header reveal">
+      <div class="eyebrow">Serviciile noastre</div>
+      <h2>Tratamente <em>complete</em> pentru fiecare nevoie</h2>
+      <p class="section-sub">Oferim o gamă largă de tratamente stomatologice cu tehnologie de ultimă generație și anestezie modernă pentru maxim confort.</p>
+    </div>
+    <div class="servicii-grid reveal">
+      <div class="serviciu-card">
+        <span class="s-num">01</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4v1h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4z"/></svg></div>
+        <div class="s-title">Parodontologie</div>
+        <div class="s-desc">Diagnostic și tratament complet al bolilor parodontale. Chiuretaj subgingival, chirurgie parodontală și terapie de menținere.</div>
+      </div>
+      <div class="serviciu-card">
+        <span class="s-num">02</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <div class="s-title">Implantologie</div>
+        <div class="s-desc">Implanturi dentare de înaltă calitate cu rate de succes de peste 98%. Restaurare completă a arcadei dentare cu soluții fixe.</div>
+      </div>
+      <div class="serviciu-card">
+        <span class="s-num">03</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="s-title">Estetică Dentară</div>
+        <div class="s-desc">Fațete ceramice, coroane zirconiu, albire profesională și design complet al zâmbetului pentru aspectul perfect.</div>
+      </div>
+      <div class="serviciu-card">
+        <span class="s-num">04</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="s-title">Ortodonție</div>
+        <div class="s-desc">Aparate dentare tradiționale și alinere transparente Invisalign pentru un zâmbet drept și sănătos la orice vârstă.</div>
+      </div>
+      <div class="serviciu-card">
+        <span class="s-num">05</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="s-title">Chirurgie Orală</div>
+        <div class="s-desc">Extracții complexe, molare de minte, chirurgie preprotetică și regenerare osoasă cu biomateriale de top.</div>
+      </div>
+      <div class="serviciu-card">
+        <span class="s-num">06</span>
+        <div class="s-icon-bg"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="s-title">Pediatrie Dentară</div>
+        <div class="s-desc">Îngrijire stomatologică prietenoasă pentru cei mici. Prevenție, tratamente adaptate și educație dentară pentru copii.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="despre">
+  <div class="max-w">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <div class="about-img-main">
+          <svg viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1"><circle cx="100" cy="80" r="35"/><path d="M50 170c0-27.6 22.4-50 50-50s50 22.4 50 50"/><rect x="30" y="30" width="140" height="140" rx="70" stroke-dasharray="8 4"/></svg>
+        </div>
+        <div class="about-accent">
+          <div class="accent-num">2009</div>
+          <div class="accent-label">Fondat în</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div class="eyebrow">Despre Parodontal Clinic</div>
+        <h2>Excelență medicală de <em>15 ani</em> în Moldova</h2>
+        <p class="section-sub">Suntem o clinică de referință în domeniul stomatologic, recunoscuți pentru abordarea holistică a sănătății orale și utilizarea celor mai avansate tehnologii.</p>
+        <ul class="check-list">
+          <li><div class="check-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,3"/></svg></div>Echipamente de imagistică 3D Cone Beam CT</li>
+          <li><div class="check-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,3"/></svg></div>Laser dentar pentru tratamente minim-invazive</li>
+          <li><div class="check-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,3"/></svg></div>Laborator dentar propriu cu ceramiste specializate</li>
+          <li><div class="check-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,3"/></svg></div>Protocoale de sterilizare conform standardelor europene</li>
+          <li><div class="check-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.5,7.5 8,3"/></svg></div>Finanțare în rate fără dobândă disponibilă</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="display:inline-flex">Consultație gratuită →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="echipa" id="echipa">
+  <div class="max-w">
+    <div class="section-header reveal">
+      <div class="eyebrow">Echipa noastră</div>
+      <h2>Medici cu <em>pasiune</em> și expertiză</h2>
+      <p class="section-sub">O echipă de specialiști formați în România și Europa, cu training continuu la cele mai prestigioase centre medicale.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-photo">
+          <svg viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1.5"><circle cx="100" cy="70" r="40"/><path d="M20 180c0-44.2 35.8-80 80-80s80 35.8 80 80"/></svg>
+          <div class="team-photo-overlay"></div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Dr. Elena Popescu</div>
+          <div class="team-role">Parodontolog & Fondatoare</div>
+          <div class="team-desc">Doctorat în Parodontologie, Universitatea de Medicină din București. 15 ani experiență, membră EFP (European Federation of Periodontology).</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(160deg,#1a2a45 0%,#2d5a4e 100%)">
+          <svg viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1.5"><circle cx="100" cy="70" r="40"/><path d="M20 180c0-44.2 35.8-80 80-80s80 35.8 80 80"/></svg>
+          <div class="team-photo-overlay"></div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Dr. Alexandru Marin</div>
+          <div class="team-role">Specialist Implantologie</div>
+          <div class="team-desc">Format la Universitatea din Viena. Certificat ITI (International Team for Implantology). Peste 2000 de implanturi plasate cu succes.</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(160deg,#2a1a45 0%,#4e2d5a 100%)">
+          <svg viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1.5"><circle cx="100" cy="70" r="40"/><path d="M20 180c0-44.2 35.8-80 80-80s80 35.8 80 80"/></svg>
+          <div class="team-photo-overlay"></div>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Dr. Maria Ionescu</div>
+          <div class="team-role">Estetică Dentară & Ortodonție</div>
+          <div class="team-desc">Specialist Invisalign Platinum Provider. Autoare a numeroase studii în reabilitare orală complexă și design digital al zâmbetului.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimoniale" id="testimoniale">
+  <div class="max-w">
+    <div class="section-header reveal">
+      <div class="eyebrow">Ce spun pacienții</div>
+      <h2>Povești de <em>succes</em> reale</h2>
+      <p class="section-sub">Peste 4800 de pacienți mulțumiți ne recomandă familia și prietenii lor.</p>
+    </div>
+    <div class="test-grid reveal">
+      <div class="test-card">
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="test-text">"Aveam o frică teribilă de stomatolog. Echipa de la Parodontal Clinic m-a ajutat să depășesc această barieră. Tratamentul a fost nedureros, iar rezultatul — de vis!"</div>
+        <div class="test-author"><div class="test-av">AM</div><div><div class="test-name">Ana Moldovan</div><div class="test-date">Tratament complet de reabilitare</div></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="test-text">"Am plasat 4 implanturi cu Dr. Marin. Totul a decurs perfect — de la planificare 3D până la coroana finală. Sunt extrem de mulțumit de profesionalism."</div>
+        <div class="test-author"><div class="test-av" style="background:rgba(201,168,76,0.2);color:var(--gold-light)">VC</div><div><div class="test-name">Victor Constantin</div><div class="test-date">Implanturi dentare multiple</div></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="test-text">"Fațetele ceramice au transformat complet aspectul zâmbetului meu. Dr. Ionescu a înțeles perfect ce îmi doresc. Recomand Parodontal Clinic tuturor!"</div>
+        <div class="test-author"><div class="test-av" style="background:rgba(100,50,100,0.3);color:#c9a0dc">RL</div><div><div class="test-name">Roxana Lupu</div><div class="test-date">Fațete ceramice & albire</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="max-w">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Contact & Programări</div>
+        <h2>Programați o consultație <em>gratuită</em></h2>
+        <p class="section-sub">Primul pas spre un zâmbet sănătos este o consultație. Echipa noastră vă va ghida prin toate opțiunile disponibile.</p>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="info-label">Adresă</div><div class="info-value">Str. Ștefan cel Mare 100, Chișinău<br>MD-2001, Moldova</div></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.92a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+            <div><div class="info-label">Telefon</div><div class="info-value">+373 22 123 456<br>+373 78 123 456</div></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="info-label">Program</div><div class="info-value">Luni–Vineri: 09:00–19:00<br>Sâmbătă: 09:00–14:00</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="contact-form">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--navy);margin-bottom:28px">Programare online</div>
+          <div class="form-row">
+            <div class="form-group"><label>Prenume</label><input type="text" placeholder="Ion"></div>
+            <div class="form-group"><label>Nume</label><input type="text" placeholder="Popescu"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Telefon</label><input type="tel" placeholder="+373 7X XXX XXX"></div>
+            <div class="form-group"><label>Email</label><input type="email" placeholder="email@exemplu.md"></div>
+          </div>
+          <div class="form-group"><label>Serviciu dorit</label>
+            <select><option>Consultație gratuită</option><option>Parodontologie</option><option>Implantologie</option><option>Estetică dentară</option><option>Ortodonție</option><option>Chirurgie orală</option></select>
+          </div>
+          <div class="form-group"><label>Mesaj (opțional)</label><textarea placeholder="Descrieți pe scurt problema sau întrebarea..."></textarea></div>
+          <button class="form-submit" onclick="alert('Mulțumim! Vă vom contacta în curând pentru confirmarea programării.')">Trimite Programarea</button>
+          <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:14px">Vă vom contacta în maxim 2 ore pentru confirmare</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="max-w">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/></svg></div><span class="logo-text">Parodontal Clinic</span></div>
+        <p class="footer-tagline">Clinică stomatologică de excelență. Sănătate dentară pentru întreaga familie din 2009.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicii</h4>
+        <a href="#">Parodontologie</a><a href="#">Implantologie</a><a href="#">Estetică dentară</a><a href="#">Ortodonție</a><a href="#">Chirurgie orală</a>
+      </div>
+      <div class="footer-col">
+        <h4>Clinica</h4>
+        <a href="#">Despre noi</a><a href="#">Echipa medicală</a><a href="#">Dotări & tehnologii</a><a href="#">Blog stomatologic</a><a href="#">Cariere</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#">+373 22 123 456</a><a href="#">office@parodontalclinic.md</a><a href="#">Ștefan cel Mare 100</a><a href="#">Chișinău, Moldova</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Parodontal Clinic. Toate drepturile rezervate.</span>
+      <span>Politica de confidențialitate · Cookie-uri · ANSP MD</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, {threshold: 0.1});
+reveals.forEach(r => obs.observe(r));
+</script>
+</body>
+</html>
