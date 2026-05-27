@@ -13,18 +13,18 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --gold:#b8963e;
-  --gold2:#d4af6a;
-  --gold3:#f0d898;
-  --gold-pale:#fdf6e3;
+  --gold:#1a5fa8;
+  --gold2:#3a9fd5;
+  --gold3:#a8d4f0;
+  --gold-pale:#eef5fc;
   --white:#ffffff;
-  --off-white:#fafaf8;
+  --off-white:#f5f9fd;
   --charcoal:#1a1a1a;
   --charcoal2:#2d2d2d;
   --gray:#888888;
   --gray2:#c8c8c8;
   --light:#f5f3ef;
-  --border:rgba(184,150,62,0.2);
+  --border:rgba(26,95,168,0.2);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;color:var(--charcoal);background:var(--white);overflow-x:hidden;font-weight:300}
@@ -32,7 +32,7 @@ body{font-family:'Jost',sans-serif;color:var(--charcoal);background:var(--white)
 /* FLOATING ACTION BUTTONS */
 .fab-cluster{position:fixed;bottom:32px;right:32px;z-index:200;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
 .fab{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;border:none;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
-.fab-phone{background:var(--gold);color:white}
+.fab-phone{background:#1a5fa8;color:white}
 .fab-whatsapp{background:#25D366;color:white}
 .fab-telegram{background:#229ED9;color:white}
 .fab:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(0,0,0,0.2)}
@@ -46,7 +46,7 @@ body{font-family:'Jost',sans-serif;color:var(--charcoal);background:var(--white)
 .topbar-right{display:flex;gap:24px;align-items:center}
 .topbar-right a{font-size:12px;color:rgba(255,255,255,0.7);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s}
 .topbar-right a:hover{color:var(--gold2)}
-.topbar-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;opacity:0.5}
+.topbar-dot{width:4px;height:4px;background:#3a9fd5;border-radius:50%;opacity:0.5}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 60px}
@@ -72,7 +72,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 /* HERO */
 .hero{min-height:100vh;background:var(--off-white);display:flex;align-items:center;position:relative;overflow:hidden}
 .hero-pattern{position:absolute;inset:0;opacity:0.025;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,var(--charcoal) 60px,var(--charcoal) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,var(--charcoal) 60px,var(--charcoal) 61px)}
-.hero-gold-line{position:absolute;right:0;top:0;bottom:0;width:42%;background:linear-gradient(180deg,var(--gold-pale) 0%,#fff8e8 100%);clip-path:polygon(12% 0,100% 0,100% 100%,0% 100%)}
+.hero-gold-line{position:absolute;right:0;top:0;bottom:0;width:42%;background:linear-gradient(180deg,var(--gold-pale) 0%,#e8f4fc 100%);clip-path:polygon(12% 0,100% 0,100% 100%,0% 100%)}
 .hero-inner{max-width:1280px;margin:0 auto;padding:0 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2;width:100%}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:32px}
 .hero-eyebrow-line{width:40px;height:1px;background:var(--gold)}
@@ -90,7 +90,7 @@ h1 em{font-style:italic;color:var(--gold)}
 .trust-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--gold);line-height:1}
 .trust-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em;line-height:1.4}
 .hero-visual{position:relative;padding:20px}
-.hero-img-frame{width:100%;aspect-ratio:4/5;background:#ffffff;position:relative;overflow:hidden;border:1px solid rgba(184,150,62,0.12)}
+.hero-img-frame{width:100%;aspect-ratio:4/5;background:#ffffff;position:relative;overflow:hidden;border:1px solid rgba(26,95,168,0.12)}
 .hero-img-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .hero-img-inner svg{width:55%;opacity:0.18}
 .hero-badge-gold{position:absolute;bottom:24px;left:-24px;background:var(--gold);color:white;padding:20px 24px;min-width:140px}
@@ -150,7 +150,7 @@ h2 em{font-style:italic;color:var(--gold)}
 .preturi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .pret-card{background:var(--white);border:1px solid var(--border);padding:36px 32px;position:relative;transition:all 0.3s}
 .pret-card.featured{background:var(--charcoal);border-color:var(--charcoal)}
-.pret-card:hover{box-shadow:0 12px 48px rgba(184,150,62,0.12);transform:translateY(-4px)}
+.pret-card:hover{box-shadow:0 12px 48px rgba(26,95,168,0.12);transform:translateY(-4px)}
 .pret-featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:white;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:5px 16px}
 .pret-serviciu{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .pret-card.featured .pret-serviciu{color:var(--gold2)}
@@ -177,8 +177,8 @@ h2 em{font-style:italic;color:var(--gold)}
 .ba-item{background:var(--white);overflow:hidden;cursor:pointer}
 .ba-imgs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);aspect-ratio:4/3}
 .ba-img{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.ba-img-before{background:linear-gradient(160deg,#e8e4dc,#d8d4cc)}
-.ba-img-after{background:linear-gradient(160deg,#f0ece0,#e8e2d0)}
+.ba-img-before{background:linear-gradient(160deg,#dce8f4,#b8d0ec)}
+.ba-img-after{background:linear-gradient(160deg,#e8f4fc,#c8e4f8)}
 .ba-img svg{width:45%;opacity:0.12}
 .ba-tag{position:absolute;bottom:8px;left:8px;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 8px;font-family:'Jost',sans-serif}
 .ba-tag-before{background:rgba(0,0,0,0.5);color:white}
@@ -191,7 +191,7 @@ h2 em{font-style:italic;color:var(--gold)}
 .about{background:var(--off-white)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-img-wrap{position:relative}
-.about-img-main{aspect-ratio:3/4;background:linear-gradient(160deg,#e0d8c8,#c8bc9c);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.about-img-main{aspect-ratio:3/4;background:linear-gradient(160deg,#d0e8f8,#a0ccec);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .about-img-main svg{width:55%;opacity:0.12}
 .about-year{position:absolute;bottom:-16px;right:-16px;background:var(--gold);padding:20px 24px;text-align:center}
 .ay-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:400;color:white;line-height:1}
@@ -209,7 +209,7 @@ h2 em{font-style:italic;color:var(--gold)}
 .echipa{background:var(--white)}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .team-card{cursor:pointer}
-.team-photo{aspect-ratio:3/4;background:linear-gradient(160deg,#e8e0d0,#d0c8b0);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.team-photo{aspect-ratio:3/4;background:linear-gradient(160deg,#dceef8,#b0d0ec);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .team-photo svg{width:50%;opacity:0.1}
 .team-photo-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,26,26,0.6) 0%,transparent 55%);opacity:0;transition:opacity 0.4s}
 .team-card:hover .team-photo-overlay{opacity:1}
@@ -260,11 +260,11 @@ h2 em{font-style:italic;color:var(--gold)}
 .gallery-item{aspect-ratio:1;overflow:hidden;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center}
 .gallery-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
 .g-img{width:100%;height:100%;object-fit:cover;display:flex;align-items:center;justify-content:center}
-.g-img-1{background:linear-gradient(135deg,#e8e0d0,#d4c8a8)}
-.g-img-2{background:linear-gradient(135deg,#dce8e0,#b8d4c0)}
-.g-img-3{background:linear-gradient(135deg,#e0dce8,#c4b8d4)}
-.g-img-4{background:linear-gradient(135deg,#e8e0d0,#c8bc9c)}
-.g-img-5{background:linear-gradient(135deg,#e8e8d0,#d4d4a8)}
+.g-img-1{background:linear-gradient(135deg,#dceef8,#d4c8a8)}
+.g-img-2{background:linear-gradient(135deg,#d0e8f8,#90c8ec)}
+.g-img-3{background:linear-gradient(135deg,#d8eaf8,#a8ccec)}
+.g-img-4{background:linear-gradient(135deg,#dceef8,#a0ccec)}
+.g-img-5{background:linear-gradient(135deg,#e0f0fc,#b8dcf4)}
 .g-img svg{width:40%;opacity:0.12}
 .g-overlay{position:absolute;inset:0;background:rgba(26,26,26,0);transition:background 0.4s;display:flex;align-items:center;justify-content:center}
 .gallery-item:hover .g-overlay{background:rgba(26,26,26,0.45)}
@@ -277,16 +277,16 @@ h2 em{font-style:italic;color:var(--gold)}
 .parteneri-label{text-align:center;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray2);margin-bottom:36px}
 .parteneri-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
 .partner-logo{font-family:'Playfair Display',serif;font-size:16px;color:var(--gray2);font-weight:400;letter-spacing:0.08em;transition:color 0.3s;cursor:default}
-.partner-logo:hover{color:var(--gold)}
+.partner-logo:hover{color:#1a5fa8}
 
 /* BLOG */
 .blog{background:var(--white)}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .blog-card{cursor:pointer}
 .blog-img{aspect-ratio:16/9;margin-bottom:20px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.blog-img-1{background:linear-gradient(135deg,#e8e0d0,#d4c4a4)}
-.blog-img-2{background:linear-gradient(135deg,#d8e8e0,#b4d0c4)}
-.blog-img-3{background:linear-gradient(135deg,#e4d8e8,#c4acd0)}
+.blog-img-1{background:linear-gradient(135deg,#dceef8,#b8d4ec)}
+.blog-img-2{background:linear-gradient(135deg,#cce4f8,#90c4ec)}
+.blog-img-3{background:linear-gradient(135deg,#d8eaf8,#a8ccec)}
 .blog-img svg{width:35%;opacity:0.12;transition:transform 0.4s}
 .blog-card:hover .blog-img svg{transform:scale(1.05)}
 .blog-cat{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
@@ -628,22 +628,22 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
     <div class="ba-grid reveal">
       <div class="ba-item">
         <div class="ba-imgs">
-          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#8a7454" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
-          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#b8963e" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
+          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#2a6fa8" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
+          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#1a5fa8" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
         </div>
         <div class="ba-info"><div class="ba-title">Reabilitare Completă</div><div class="ba-treatment">Implanturi + Coroane Zirconiu</div></div>
       </div>
       <div class="ba-item">
         <div class="ba-imgs">
-          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#8a7454" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
-          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#b8963e" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
+          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#2a6fa8" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
+          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#1a5fa8" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
         </div>
         <div class="ba-info"><div class="ba-title">Zâmbet Hollywood</div><div class="ba-treatment">8 Fațete Ceramice E-max</div></div>
       </div>
       <div class="ba-item">
         <div class="ba-imgs">
-          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#8a7454" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
-          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#b8963e" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
+          <div class="ba-img ba-img-before"><svg viewBox="0 0 100 100" fill="none" stroke="#2a6fa8" stroke-width="1"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-before">Înainte</span></div>
+          <div class="ba-img ba-img-after"><svg viewBox="0 0 100 100" fill="none" stroke="#1a5fa8" stroke-width="1.5"><circle cx="50" cy="40" r="20"/><path d="M20 85c0-16.6 13.4-30 30-30s30 13.4 30 30"/></svg><span class="ba-tag ba-tag-after">După</span></div>
         </div>
         <div class="ba-info"><div class="ba-title">Tratament Parodontal</div><div class="ba-treatment">Chirurgie + Menținere</div></div>
       </div>
@@ -657,7 +657,7 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
     <div class="about-grid">
       <div class="about-img-wrap reveal">
         <div class="about-img-main">
-          <svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><circle cx="100" cy="80" r="38"/><path d="M28 180c0-39.8 32.2-72 72-72s72 32.2 72 72"/><rect x="20" y="20" width="160" height="160" rx="80" stroke-dasharray="8 6" opacity="0.4"/></svg>
+          <svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><circle cx="100" cy="80" r="38"/><path d="M28 180c0-39.8 32.2-72 72-72s72 32.2 72 72"/><rect x="20" y="20" width="160" height="160" rx="80" stroke-dasharray="8 6" opacity="0.4"/></svg>
         </div>
         <div class="about-year">
           <div class="ay-num">2025</div>
@@ -694,11 +694,11 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
       <p class="s-sub">Dotări de ultimă generație într-un ambient modern, cald și relaxant.</p>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item"><div class="g-img g-img-1" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><rect x="20" y="40" width="160" height="120" rx="4"/><line x1="20" y1="70" x2="180" y2="70"/><circle cx="100" cy="110" r="20"/></svg></div><div class="g-overlay"><span class="g-label">Sala de Tratament</span></div></div>
-      <div class="gallery-item"><div class="g-img g-img-2" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="30"/></svg></div><div class="g-overlay"><span class="g-label">Echipamente 3D</span></div></div>
-      <div class="gallery-item"><div class="g-img g-img-3" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><path d="M40 160 L100 40 L160 160 Z"/></svg></div><div class="g-overlay"><span class="g-label">Laborator Ceramic</span></div></div>
-      <div class="gallery-item"><div class="g-img g-img-4" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><rect x="40" y="40" width="120" height="120" rx="60"/></svg></div><div class="g-overlay"><span class="g-label">Recepție</span></div></div>
-      <div class="gallery-item"><div class="g-img g-img-5" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><path d="M20 100 Q100 20 180 100 Q100 180 20 100Z"/></svg></div><div class="g-overlay"><span class="g-label">Sterilizare</span></div></div>
+      <div class="gallery-item"><div class="g-img g-img-1" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><rect x="20" y="40" width="160" height="120" rx="4"/><line x1="20" y1="70" x2="180" y2="70"/><circle cx="100" cy="110" r="20"/></svg></div><div class="g-overlay"><span class="g-label">Sala de Tratament</span></div></div>
+      <div class="gallery-item"><div class="g-img g-img-2" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="30"/></svg></div><div class="g-overlay"><span class="g-label">Echipamente 3D</span></div></div>
+      <div class="gallery-item"><div class="g-img g-img-3" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><path d="M40 160 L100 40 L160 160 Z"/></svg></div><div class="g-overlay"><span class="g-label">Laborator Ceramic</span></div></div>
+      <div class="gallery-item"><div class="g-img g-img-4" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><rect x="40" y="40" width="120" height="120" rx="60"/></svg></div><div class="g-overlay"><span class="g-label">Recepție</span></div></div>
+      <div class="gallery-item"><div class="g-img g-img-5" style="width:100%;height:100%"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><path d="M20 100 Q100 20 180 100 Q100 180 20 100Z"/></svg></div><div class="g-overlay"><span class="g-label">Sterilizare</span></div></div>
     </div>
   </div>
 </section>
@@ -714,7 +714,7 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
     <div class="team-grid reveal">
       <div class="team-card">
         <div class="team-photo">
-          <svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
+          <svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
           <div class="team-photo-overlay"></div>
           <a href="#contact" class="team-photo-cta">Programare →</a>
         </div>
@@ -724,7 +724,7 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
       </div>
       <div class="team-card">
         <div class="team-photo" style="background:linear-gradient(160deg,#dce8e0,#b8d4c0)">
-          <svg viewBox="0 0 200 200" fill="none" stroke="#4a7a5a" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1a5fa8" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
           <div class="team-photo-overlay"></div>
           <a href="#contact" class="team-photo-cta">Programare →</a>
         </div>
@@ -733,8 +733,8 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
         <div class="team-bio">Universitatea din Viena, certificat ITI Fellow. Specialist în implanturi imediate și regenerare osoasă. 2000+ implanturi.</div>
       </div>
       <div class="team-card">
-        <div class="team-photo" style="background:linear-gradient(160deg,#e4d8e8,#c4acd0)">
-          <svg viewBox="0 0 200 200" fill="none" stroke="#7a4a8a" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
+        <div class="team-photo" style="background:linear-gradient(160deg,#e4d8e8,#a8ccec)">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#3a8fc8" stroke-width="1.5"><circle cx="100" cy="75" r="42"/><path d="M18 190c0-45.3 36.7-82 82-82s82 36.7 82 82"/></svg>
           <div class="team-photo-overlay"></div>
           <a href="#contact" class="team-photo-cta">Programare →</a>
         </div>
@@ -841,21 +841,21 @@ footer{background:var(--charcoal2);padding:64px 60px 0}
     </div>
     <div class="blog-grid reveal">
       <div class="blog-card">
-        <div class="blog-img blog-img-1"><svg viewBox="0 0 200 200" fill="none" stroke="#8a7454" stroke-width="1"><rect x="30" y="50" width="140" height="100" rx="6"/><line x1="30" y1="80" x2="170" y2="80"/><circle cx="100" cy="120" r="16"/></svg></div>
+        <div class="blog-img blog-img-1"><svg viewBox="0 0 200 200" fill="none" stroke="#2a6fa8" stroke-width="1"><rect x="30" y="50" width="140" height="100" rx="6"/><line x1="30" y1="80" x2="170" y2="80"/><circle cx="100" cy="120" r="16"/></svg></div>
         <div class="blog-cat">Prevenție</div>
         <div class="blog-title">5 Semne că ai Nevoie de un Control Parodontal</div>
         <div class="blog-excerpt">Sângerarea gingivală, retracția gingiei sau dinții care se mișcă — iată semnalele de alarmă pe care nu trebuie să le ignori.</div>
         <div class="blog-meta"><span>15 Mai 2025</span><a href="#" class="blog-read">Citește →</a></div>
       </div>
       <div class="blog-card">
-        <div class="blog-img blog-img-2"><svg viewBox="0 0 200 200" fill="none" stroke="#4a7a5a" stroke-width="1"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="30"/><line x1="100" y1="40" x2="100" y2="70"/><line x1="100" y1="130" x2="100" y2="160"/></svg></div>
+        <div class="blog-img blog-img-2"><svg viewBox="0 0 200 200" fill="none" stroke="#1a5fa8" stroke-width="1"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="30"/><line x1="100" y1="40" x2="100" y2="70"/><line x1="100" y1="130" x2="100" y2="160"/></svg></div>
         <div class="blog-cat">Implantologie</div>
         <div class="blog-title">Implant Dentar vs. Punte: Ce să Alegi în 2025?</div>
         <div class="blog-excerpt">Comparație detaliată între cele două soluții pentru înlocuirea dinților lipsă — costuri, durabilitate, proceduri și rezultate pe termen lung.</div>
         <div class="blog-meta"><span>28 Apr 2025</span><a href="#" class="blog-read">Citește →</a></div>
       </div>
       <div class="blog-card">
-        <div class="blog-img blog-img-3"><svg viewBox="0 0 200 200" fill="none" stroke="#7a4a8a" stroke-width="1"><path d="M60 140 L100 60 L140 140 Z"/><circle cx="100" cy="110" r="12"/></svg></div>
+        <div class="blog-img blog-img-3"><svg viewBox="0 0 200 200" fill="none" stroke="#3a8fc8" stroke-width="1"><path d="M60 140 L100 60 L140 140 Z"/><circle cx="100" cy="110" r="12"/></svg></div>
         <div class="blog-cat">Estetică</div>
         <div class="blog-title">Fațete Ceramice: Ghidul Complet pentru Pacienți</div>
         <div class="blog-excerpt">Tot ce trebuie să știi despre fațetele dentare — de la indicații și contraindicații, la procedură, întreținere și cât durează.</div>
@@ -997,7 +997,7 @@ function toggleMenu(){
   if(links.style.display === 'flex'){
     links.style.display = '';
   } else {
-    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:white;padding:24px 32px;gap:20px;border-bottom:1px solid #e8e0d0;z-index:99;box-shadow:0 8px 32px rgba(0,0,0,0.08)';
+    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:white;padding:24px 32px;gap:20px;border-bottom:1px solid #dceef8;z-index:99;box-shadow:0 8px 32px rgba(0,0,0,0.08)';
   }
 }
 </script>
