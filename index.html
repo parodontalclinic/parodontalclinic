@@ -118,7 +118,7 @@ h2 em{font-style:italic;color:#2563eb}
 /* SERVICII */
 .servicii{background:#f8faff}
 .servicii-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(37,99,235,0.15);box-shadow:0 8px 48px rgba(13,30,61,0.08)}
-.serviciu{padding:44px 36px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:all 0.4s;cursor:pointer;background:white;text-decoration:none;display:block}
+.serviciu{padding:44px 36px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:all 0.4s;cursor:pointer;background:white;text-decoration:none;display:block;color:inherit}
 .serviciu:nth-child(3n){border-right:none}.serviciu:nth-child(7){border-right:none;border-bottom:none}.serviciu:nth-last-child(-n+1){border-bottom:none}
 .serviciu:nth-last-child(-n+3){border-bottom:none}.serviciu:nth-child(7){grid-column:1}
 .serviciu::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(180deg,#2563eb,#06b6d4);transition:height 0.4s}
@@ -129,13 +129,13 @@ h2 em{font-style:italic;color:#2563eb}
 .serviciu:hover .serv-num{color:rgba(255,255,255,0.08)}
 .serviciu:hover .serv-icon{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.1)}
 .serviciu:hover .serv-icon svg{stroke:#38bdf8}
-.serviciu:hover .serv-link{opacity:1}
+.serviciu:hover .serv-link{opacity:1;color:#06b6d4}
 .serv-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.04);position:absolute;top:16px;right:24px;line-height:1;transition:color 0.4s}
 .serv-icon{width:44px;height:44px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:all 0.3s}
 .serv-icon svg{width:20px;height:20px;stroke:#2563eb;fill:none;stroke-width:1.5;transition:stroke 0.3s}
 .serv-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--charcoal);margin-bottom:12px;transition:color 0.4s}
 .serv-desc{font-size:13.5px;color:var(--gray);line-height:1.7;font-weight:300;transition:color 0.4s}
-.serv-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#06b6d4;text-decoration:none;margin-top:18px;opacity:0;transition:opacity 0.3s}
+.serv-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;text-decoration:none;margin-top:18px;opacity:1;transition:all 0.3s}
 
 /* PRETURI */
 .preturi{background:#ffffff}
